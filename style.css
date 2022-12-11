@@ -3,50 +3,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
-.hero {
+/* Header section */
+#header {
     height: 100vh;
     width: 100%;
-    background-image: url("https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/304888143_2871848513116816_1314332885578279254_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=P7CahPGTIusAX9zLPWX&tn=gW4xrJqT1bfl3YwG&_nc_ht=scontent-yyz1-1.xx&oh=00_AfC6KQxhmRtjiuMLIeyZrpemXLsEIL-Za172NXBEXjg5uw&oe=6391EA1D");
+    background-image: url("background.jpg");
     background-size: cover;
     background-position: center;
 }
-
 nav {
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 45px;
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-top: 35px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
-
 .logo {
-    font-size: 35px;
+    font-size: 50px;
     letter-spacing: 1px;
     cursor: pointer;
 }
-
 nav ul li {
     list-style-type: none;
     display: inline-block;
-    padding: 10px 25px;
+    padding: 15px 30px;
 }
-
 nav ul li a {
     color: black;
     text-decoration: none;
     font-weight: bold;
-    text-transform: capitalize;
+    text-transform: capitalize; /*capitalize only the first charater in a word*/
     font-size: 30px;
 }
-
 nav ul li a:hover {
     color: #f9004d;
     transition: .4s;
 }
-
-.btn {
+/* .btn {
     background-color: #f9004d;
     color: white;
     border: 2px solid transparent;
@@ -54,96 +52,155 @@ nav ul li a:hover {
     padding: 10px 25px;
     border-radius: 30px;
     transition: transform .4s;
-}
+} */
 
-.btn:hover {    
+/* .btn:hover {    
     transform: scale(1.2);
-}
+} */
 
-.content {
+.intro{
     position: absolute;
-    top:50%;
-    left: 8%;
-    transform: translateY(-50%);
+    top:25%;
+    left: 5%;
+    /* transform: translateY(-80%); */
 }
-
-h1 {
+.intro h1 {
     margin: 20px 0px 20px;
-    font-size: 75px;
+    font-size: 70px;
+}
+.intro h3 {
+    font-size: 30px;
+    color: rgb(255, 2, 2);
 }
 
-h3 {
+/* About section */
+#about {
+    padding: 80px 0;
+    color: white;
+    background-color: black;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col1{
+    flex-basis: 35%;
+}
+.col1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.col2{
+    flex-basis: 60%;
+}
+.about_me{
+    font-size: 70px;
+    font-weight: 700;
+}
+.info-me{
     font-size: 25px;
-    margin-bottom: 50px;
 }
-
-h4 {
-    letter-spacing: 2px;
-    font-size: 20px;
+.basic-info{
+    display: flex;
+    margin: 20px 0 40px;
+    font-size: 25px;
 }
-.newsletter form{
-    width: 380px;
-    max-width: 100%;
+.title{
+    flex-basis: 20%;
+}
+.tab-font p{
+    font-size: 30px;
+}
+.tab{
+    display: flex;
+    margin: 10px 20px 20px 0px;
+}
+.tab p:hover{
+    color: #f9004d;
+    transition: .4s; 
+}
+.tab-info{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
     position: relative;
 }
-.newsletter form input:first-child{
-    display: inline-block;
-    width: 100%;
-    padding: 14px 130px 14px 15px;
-    border: 2px solid;
-    outline: none;
-    border-radius: 30px;
+.tab-content ul li{
+    list-style: none;
+    margin: 20px 0;
+    font-size: 25px;
 }
-.newsletter form input:last-child{
+.tab-content ul li span{
+    color: #ff004f;
+    font-size: 30px;
+}
+.tab-content{
+    display: none;
+}
+.tab-content.skill{
+    display: block;
+}
+
+/* Resume Section */
+#resume{
+    height: 200px;
+    background-color: rgb(110, 0, 0);
+    font-size: 50px;
+    position: relative;
+}
+#resume_button{
+    display: block;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    border: black 5px solid;
+    padding: 14px 50px;
+    border-radius: 10%;
+    text-decoration: none;
+    color: #fff;
     position: absolute;
-    display: inline-block;
-    outline: none;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 30px;
-    top: 6px;       /*margin-top*/
-    right: 6px;
-    background-color: red;
+    top: 20px ;
+    bottom: 20px;
+    right: 20px ;
+    left: 20px;
+    transition: background 0.5s;
 }
-.about{
+#resume_button:hover{
+    background-color: #ff004f;
+
+}
+/* contact */
+#contact{
+    background-color: #c2bfbf;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-left .fa-solid:hover{
+    color: #ff004f;
+    font-size: 30px;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+    font-size: 30px;
+}
+.contact-right form{
     width: 100%;
-    padding: 100px 0px;
-    background-color: #191919;
 }
-.about img{
-    height: auto;
-    width: 430px;
-}
-.about-text{
-    width: 550px;
-}
-.main{
-    width: 1130px;
-    max-width: 95%;
-    margin: 0 auto ;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.about-text h2{
-    color: white;
-    font-size: 75px;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-}
-.about-text h5{
-    color: white;
-    font-size: 22px;
-    letter-spacing: 2px;
-    margin-bottom: 25px;
-    text-transform: capitalize;
-}
-.about-text p{
-    color: #fcfc;
-    letter-spacing: 1px;
-    line-height: 28px;
-    font-size: 18px;
-    margin-bottom: 45px;
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    background-color: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 6px;
 }
 button{
     background-color: #f9004d;
@@ -161,6 +218,7 @@ button:hover{
     cursor: pointer;
 }
 
+/* Footer section */
 footer{
     position: relative;
     width: 100%;
@@ -174,19 +232,76 @@ footer{
 footer p:nth-child(1){
     font-size: 30px;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 footer p:nth-child(2){
-    font-size: 17px;
+    font-size: 20px;
     color: white;
     width: 500px;
     text-align: center;
     line-height: 26px;
 }
-.end{
-    position: absolute;
-    color: #f9004d;
-    bottom: 35px;
-    font-size: 14px;
+.social .fab{
+    margin-right: 20px;
+    color: red;
+    font-size: 30px;
+}
+.honesty{
+    font-size: 20px;
+    color: red;
+    margin-left:10px;
+    margin-right:10px;
+}
+/* css for phone screen */
+nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header {
+        background-image: url(background2.jpg);
+    }
+    .intro{
+        color: white;
+        font-size: 16px;
+        margin-top: 20%; 
+    }
+    .intro h1{
+        font-size: 20px;
+    }
+    nav ul{
+        background-color: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px ;
+    }
+    nav ul li{
+        margin: 25px;
+    }
+    nav .fa-solid{
+        display: block;
+        color: white;
+        font-size: 20px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .col1{
+        flex-basis: 100%;
+    }
+    .about_me{
+        font-size: 25px;
+    }
+    .col2.info-me{
+        font-size: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
 }
