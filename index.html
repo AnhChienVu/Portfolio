@@ -5,57 +5,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <script src="https://kit.fontawesome.com/ff8733378b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class = "hero">
+    <div id = "header">
         <nav>
             <h2 class="logo">Portfolio</h2>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About me</a></li>
-                <a href="#" class="btn">Subcribe</a>
+            <ul id="sidemenu">
+                <li><a href="#header">home</a></li>
+                <li><a href="#about">about me</a></li>
+                <li><a href="#resume1">resume</a></li>
+                <li><a href="#contact">contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
             </ul>
-            
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
 
-        <div class="content">
-            <h4>Hello, my name is</h4>
-            <h1>Anh Chien Vu</h1>
-            <h3>I am a student at Seneca College</h3>
-            <div class="newsletter">
-                <form action="#">
-                    <input type="email" name="email" id="email" placeholder="Enter Your Email">
-                    <input type="submit" name="submit" value="Let's Start">
-                </form>
-            </div>
+        <div class="intro">
+            <h1>Hi, I'm Anh Chien Vu <br> From Vietnam</h1>
+            <h3>Software Developer/ Web Designer</h3>
         </div>
     </div>
 
     <!-- About section -->
-    <section class="about">
-        <div class="main">
-            <img src="https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/283430056_2800691813565820_3895623816848360508_n.jpg?stp=c0.23.206.206a_dst-jpg_p206x206&_nc_cat=102&ccb=1-7&_nc_sid=da31f3&_nc_ohc=r_cWkyUYBdgAX9Zb9UM&tn=gW4xrJqT1bfl3YwG&_nc_ht=scontent-yyz1-1.xx&oh=00_AfAKym7x4m9rcvUlsQodgU_ndpQ5A-VWSckiozR3bsvZNg&oe=6391B0CA" alt="">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <h5>Student</h5>
-                <p>abcdefgh</p>
-                <button type="button">Let's talk</button>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <img src="https://scontent.fyzd1-3.fna.fbcdn.net/v/t39.30808-6/283153795_2799554497012885_116063949736167723_n.jpg?stp=c0.79.206.206a_dst-jpg_p206x206&_nc_cat=101&ccb=1-7&_nc_sid=da31f3&_nc_ohc=dGMvExHuWngAX_uThpq&tn=gW4xrJqT1bfl3YwG&_nc_ht=scontent.fyzd1-3.fna&oh=00_AfCyQKfVCSTvho2z-Zpp_OIku-GQS2ADHZIEDHIakkIsQw&oe=63998F61" alt="">
+                </div>
+
+                <div class="col2">
+                    <h1 class="about_me">About Me</h1>
+                    <p class="info-me">Hi, I am Anh Chien Vu, currently I am studing the second semester at Seneca College. My major is Computer Programming and Analys. 
+                        Before I doing the CPA program, I also did the Computer Engineering Technology program at Seneca, which focus more on the hardware, and because I dont want just 
+                        stop at the hardware field, I decided to learn more about software fields and web development. I see that creating a website is kind of interesting and I also 
+                        have more knowledge about how a website is coded. In the future, I want to become a Full stack developer who can deal with front-end and back-end, and this 
+                        website is absolutely a stage in my career.</p>
+                    <div class="basic-info">
+                        <div class="title">
+                            <p>Age:</p>
+                            <p>Email:</p>
+                            <p>Language:</p>
+                            <p>Class section:</p>
+                            <p>Student ID:</p>
+                            <p>Instructor:</p>
+                        </div>
+                        <div class="data">
+                            <p>22</p>
+                            <p>acvu@myseneca.ca</p>
+                            <p>English, Vietnamese</p>
+                            <p>NAA</p>
+                            <p>102903218</p>
+                            <p>Harry Scanlan</p>
+                        </div>
+                    </div>
+                    <div class="tab-font">
+                        <div class="tab">
+                            <p class="tab-info active" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-info" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-content skill" id="skills">
+                            <ul>
+                                <li><span>C/ C++/ Python</span><br>Coding a program using one of those languages</li>
+                                <li><span>HTML/ CSS/ JavaScript</span><br>Create a basic website by combining 3 of those</li>
+                                <li><span>SQL</span><br>Using SQL to extract data and Create database in a server</li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="education">
+                            <ul>
+                                <li><span>2021-2024(expected): Seneca College</span><br>- Advanced Diploma in Compuuter Programming and Analys<br>- In the Dean's list every semester</li>
+                                <li><span>2021-2022: Seneca College</span><br>- Computer Engineering Technology program</li>
+                                <li><span>2018-2021: Hanoi University of Science and Technology</span><br>- Mechanical Engineering program</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+   
+    <!-- Download resume -->
+    <div id="resume">
+        <a id="resume_button" href="resume.pdf" download><i class="fa-solid fa-download"></i>  Resume</a>
+    </div>
+
+    <!-- contact -->
+    <div id="contact">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="about_me">Contact me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> acvu@myseneca.ca</p>
+                <p><i class="fa-solid fa-phone"></i> 0123456789</p>
+            </div>
+            <div class="contact-right">
+                <form id="contact-form" name="feedback" action="https://httpbin.org/post" method="post" >
+                    <input type="text" id="Name" name="Name" placeholder="Your name.."> 
+                    <input type="email" id="Email" name="Email" placeholder="Your email..">   
+                    <textarea id="Feedback" name="Feedback" placeholder="Write something.." style="height:200px"></textarea>   
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
    <!-- footer -->
    <footer>
     <p>Anh Chien Vu</p>
     <p>Thank you for passing by my Website!</p>
     <div class="social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
     </div>
-    <p class="end">Copyright by Anh Chien Vu</p>
+    <p class="honesty">I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy. No part of this assessment has been copied manually or electronically 
+            from any other source (including web sites) except for the information supplied by the WEB222 instructors and / or made available in this assessment for my use. 
+            I also declare that no part of this assignment has been distributed to other students.</p>
    </footer>
    
-
+    <script src="script.js"></script>
 </body>
 </html>
