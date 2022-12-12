@@ -1,16 +1,3 @@
-var tabs = document.getElementsByClassName('tab-info');
-var tabcontents = document.getElementsByClassName('tab-content');
-function opentab(tabname) {
-    for(tab of tabs){
-        tab.classList.remove("active");
-    }
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove("skill");
-    }
-    //event.currentTarget.classlist.add("active");
-    document.getElementById(tabname).classList.add("skill");
-}
-
 //function validate()
     var contactForm = document.getElementById('contact-form');
     contactForm.onsubmit = function() {
